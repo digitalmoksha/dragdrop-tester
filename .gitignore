@@ -1,5 +1,6 @@
 .repl_history
 build
+build-log
 tags
 app/pixate_code.rb
 resources/*.nib
@@ -12,6 +13,7 @@ nbproject
 #*#
 *~
 *.sw[po]
+.bundle
 .eprj
 .sass-cache
 .idea

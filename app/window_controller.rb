@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class WindowController < NSWindowController
   attr_accessor :main_controller
-  
+
   #------------------------------------------------------------------------------
   def init
     super.tap do

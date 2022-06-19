@@ -1,5 +1,6 @@
-class MainController < NSViewController
+# frozen_string_literal: true
 
+class MainController < NSViewController
   #------------------------------------------------------------------------------
   def loadView
     @layout   = MainLayout.new
@@ -9,14 +10,13 @@ class MainController < NSViewController
     @destination_view.delegate = self
     @destination_view.initialize_dragging
 
-    @log_field    = @layout.get(:log_field)
+    @log_field = @layout.get(:log_field)
   end
 
   #------------------------------------------------------------------------------
   def log_msg(msg)
     @log_field.setSelectedRange(NSMakeRange(@log_field.string.length, 0))
     @log_field.insertText("#{msg}\n")
-    @log_field.setSelectedRange(NSMakeRange(@log_field.string.length, 0))    
+    @log_field.setSelectedRange(NSMakeRange(@log_field.string.length, 0))
   end
-
 end

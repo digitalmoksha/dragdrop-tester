@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AppDelegate
   def buildMenu
     @mainMenu = NSMenu.new
@@ -18,7 +20,8 @@ class AppDelegate
       addItem(NSMenuItem.separatorItem)
       addItemWithTitle('Check Spelling While Typing', action: 'toggleContinuousSpellChecking:', keyEquivalent: '')
       addItemWithTitle('Check Grammar With Spelling', action: 'toggleGrammarChecking:', keyEquivalent: '')
-      addItemWithTitle('Correct Spelling Automatically', action: 'toggleAutomaticSpellingCorrection:', keyEquivalent: '')
+      addItemWithTitle('Correct Spelling Automatically', action: 'toggleAutomaticSpellingCorrection:',
+                                                         keyEquivalent: '')
     end
 
     substitutions_menu = createMenu('Substitutions') do
@@ -50,7 +53,7 @@ class AppDelegate
       addItem(NSMenuItem.separatorItem)
       addItemWithTitle("Hide #{appName}", action: 'hide:', keyEquivalent: 'h')
       item = addItemWithTitle('Hide Others', action: 'hideOtherApplications:', keyEquivalent: 'H')
-      item.keyEquivalentModifierMask = NSCommandKeyMask|NSAlternateKeyMask
+      item.keyEquivalentModifierMask = NSCommandKeyMask | NSAlternateKeyMask
       addItemWithTitle('Show All', action: 'unhideAllApplications:', keyEquivalent: '')
       addItem(NSMenuItem.separatorItem)
       addItemWithTitle("Quit #{appName}", action: 'terminate:', keyEquivalent: 'q')
@@ -64,7 +67,7 @@ class AppDelegate
       addItemWithTitle('Copy', action: 'copy:', keyEquivalent: 'c')
       addItemWithTitle('Paste', action: 'paste:', keyEquivalent: 'v')
       item = addItemWithTitle('Paste and Match Style', action: 'pasteAsPlainText:', keyEquivalent: 'V')
-      item.keyEquivalentModifierMask = NSCommandKeyMask|NSAlternateKeyMask
+      item.keyEquivalentModifierMask = NSCommandKeyMask | NSAlternateKeyMask
       addItemWithTitle('Delete', action: 'delete:', keyEquivalent: '')
       addItemWithTitle('Select All', action: 'selectAll:', keyEquivalent: 'a')
       addItem(NSMenuItem.separatorItem)

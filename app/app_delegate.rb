@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 # App for testing different drag/drop scenarios and the information available.
 #------------------------------------------------------------------------------
 class AppDelegate
   #------------------------------------------------------------------------------
-  def applicationDidFinishLaunching(notification)
+  def applicationDidFinishLaunching(_notification)
     buildMenu
     buildWindow
   end
